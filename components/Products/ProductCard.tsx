@@ -1,3 +1,5 @@
+'use client';
+
 import { AdidasProduct } from "@/db/adidasProduct"
 
 const ProductCard = ({image, name, price, status, type, colorsAvailable }:AdidasProduct) => {

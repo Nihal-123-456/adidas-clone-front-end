@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image"
 
 const RadioButtons = ({name, labelName}:{name:string, labelName:string}) => {

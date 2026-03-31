@@ -1,3 +1,5 @@
+'use client';
+
 import { footerData, FooterColumn, FooterLink } from "@/lib/footerData"
 import Image from "next/image"
 
