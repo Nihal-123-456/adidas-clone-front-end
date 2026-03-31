@@ -1,5 +1,11 @@
 import LoginForm from '@/components/Login/LoginForm'
 import Image from 'next/image'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Login",
+  description: "Login page",
+};
 
 const page = () => {
   return (

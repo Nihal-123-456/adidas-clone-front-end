@@ -2,6 +2,12 @@ import { AdiClubBanner } from "@/components/Home/CalltoAction"
 import { adidasProducts, AdidasProduct } from "@/db/adidasProduct"
 import ProductCard from "@/components/Products/ProductCard"
 import FilterSort from "@/components/Products/FilterSort"
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Products List",
+  description: "Products List page",
+};
 
 const page = () => {
   return (
