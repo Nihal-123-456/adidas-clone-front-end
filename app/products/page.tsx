@@ -3,6 +3,7 @@ import { adidasProducts, AdidasProduct } from "@/db/adidasProduct"
 import ProductCard from "@/components/Products/ProductCard"
 import FilterSort from "@/components/Products/FilterSort"
 import { Metadata } from 'next';
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Products List",
@@ -22,7 +23,7 @@ const page = () => {
 
         <div className="px-0 lg:px-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {adidasProducts.map((item:AdidasProduct) => (
-                <ProductCard {...item} key={item.id}/>
+                <Link href={`/details/${item.id}`} key={item.id}><ProductCard {...item}/></Link>
             ))}
         </div>
         <p className="text-center text-[15px] py-3 lg:py-6">Page 1 of 100</p>

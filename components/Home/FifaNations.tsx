@@ -4,6 +4,7 @@ import { ScrollButton } from './Collections'
 import { nationJerseyData, NationJersey } from '@/db/jerseyData'
 import { JerseyProduct, jerseyProducts } from '@/db/jerseyProduct';
 import useScroll from '@/lib/hooks/useScroll';
+import Link from 'next/link';
 
 const JerseyCard = ({image, name}:{image:string, name:string}) => {
     return (
@@ -59,7 +60,7 @@ const FifaNations = () => {
 
                 <div ref={scrollRefTwo} onScroll={updateScrollButtonsTwo} className='flex overflow-x-auto gap-2.5 items-stretch scrollbar-hide'>   
                     {jerseyProducts.map((item:JerseyProduct) => (
-                            <JerseyProductCard image={item.image} productName={item.productName} price={item.price} nation={item.nation} type={item.type} key={item.id}/>
+                            <Link key={item.id} href={`/details/${item.id}`}><JerseyProductCard image={item.image} productName={item.productName} price={item.price} nation={item.nation} type={item.type} /></Link>
                         ))
                     }
                 </div>
